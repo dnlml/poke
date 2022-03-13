@@ -1,12 +1,19 @@
 <script>
-  import { page } from '$app/stores';
+  import Nav from '../components/Nav.svelte';
 </script>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about" class:active={$page.url.pathname == '/about'}>About</a>
-</nav>
-<ul>
-  <li>{$page.url.pathname}</li>
-</ul>
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap"
+    rel="stylesheet"
+  />
+</svelte:head>
+
+<Nav />
 <slot />
+
+<style global lang="scss">
+  @import '../styles/global.scss';
+</style>
