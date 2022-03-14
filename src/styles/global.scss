@@ -5,8 +5,15 @@
   --color-background-cream: rgb(244, 242, 231);
   --color-text-orange: rgb(197, 79, 0);
   --color-text-black: rgb(51, 49, 47);
+
+  --animation-duration: 0.33s;
 }
 
 body {
   background-color: var(--color-background-cream);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-orange);
 }
