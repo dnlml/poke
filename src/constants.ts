@@ -13,7 +13,7 @@ export const paths: IPath[] = [
     title: 'About'
   },
   {
-    path: '/pokemon',
-    title: 'Pokemon'
+    path: '/pokemons',
+    title: 'Pokemons'
   }
 ];
