@@ -1,14 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
   import Poke from '../components/Icons/Poke.svelte';
-  import { getPokemons } from '../services/api';
   import PokeList from '../components/PokeList/PokeList.svelte';
-
-  let pokemons = [];
-
-  onMount(async () => {
-    pokemons = await getPokemons(0, 5);
-  });
+  import { pokemonStore } from '../store/store';
 </script>
 
 <Poke />
@@ -18,13 +11,13 @@
   allowing them to shine on local stages and beyond.
 </p>
 
-{#if pokemons.length}
-  <PokeList {pokemons} limit="5" />
+{#if $pokemonStore.length}
+  <PokeList limit="10" />
 {/if}
 
 <style lang="scss">
   .paragraph {
-    font-size: 72px;
+    font-size: 68px;
     text-align: center;
     color: var(--color-text-orange);
     max-width: 1600px;

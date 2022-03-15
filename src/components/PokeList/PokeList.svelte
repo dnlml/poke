@@ -1,10 +1,10 @@
 <script lang="ts">
   import PokeCard from '../PokeCard/PokeCard.svelte';
+  import { pokemonStore } from '../../store/store';
 
-  export let pokemons;
   export let limit;
 
-  const pokemosToBeShown = pokemons.slice(0, limit);
+  const pokemosToBeShown = $pokemonStore.slice(0, limit);
 </script>
 
 <ul class="poke-list">
@@ -15,8 +15,7 @@
 
 <style lang="scss">
   .poke-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }

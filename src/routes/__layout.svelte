@@ -1,5 +1,13 @@
 <script>
+  import { onMount } from 'svelte';
+  import { getPokemons } from '../services/api';
   import Nav from '../components/Nav/Nav.svelte';
+  import { pokemonStore } from '../store/store';
+
+  onMount(async () => {
+    $pokemonStore = await getPokemons(0, 15);
+  });
+  console.log('load');
 </script>
 
 <svelte:head>
