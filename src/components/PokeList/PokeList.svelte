@@ -1,10 +1,9 @@
 <script lang="ts">
   import PokeCard from '../PokeCard/PokeCard.svelte';
-  import { pokemonStore } from '../../store/store';
-
+  export let pokemonStore;
   export let limit;
 
-  const pokemosToBeShown = $pokemonStore.slice(0, limit);
+  const pokemosToBeShown = pokemonStore.slice(0, limit);
 </script>
 
 <ul class="poke-list">

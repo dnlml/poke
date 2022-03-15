@@ -1,7 +1,14 @@
+<script context="module">
+  let pokemonStore = [];
+  export const load = async ({ stuff }) => {
+    pokemonStore = stuff.pokemonStore;
+    return pokemonStore;
+  };
+</script>
+
 <script>
   import Poke from '../components/Icons/Poke.svelte';
   import PokeList from '../components/PokeList/PokeList.svelte';
-  import { pokemonStore } from '../store/store';
 </script>
 
 <Poke />
@@ -11,8 +18,8 @@
   allowing them to shine on local stages and beyond.
 </p>
 
-{#if $pokemonStore.length}
-  <PokeList limit="10" />
+{#if pokemonStore.length}
+  <PokeList {pokemonStore} limit="10" />
 {/if}
 
 <style lang="scss">

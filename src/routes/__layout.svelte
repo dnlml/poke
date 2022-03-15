@@ -1,13 +1,18 @@
-<script>
-  import { onMount } from 'svelte';
+<script context="module">
   import { getPokemons } from '../services/api';
-  import Nav from '../components/Nav/Nav.svelte';
-  import { pokemonStore } from '../store/store';
 
-  onMount(async () => {
-    $pokemonStore = await getPokemons(0, 15);
-  });
-  console.log('load');
+  export const load = async () => {
+    const pokemonStore = await getPokemons(0, 15);
+    return {
+      stuff: {
+        pokemonStore
+      }
+    };
+  };
+</script>
+
+<script>
+  import Nav from '../components/Nav/Nav.svelte';
 </script>
 
 <svelte:head>
