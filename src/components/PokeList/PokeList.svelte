@@ -20,11 +20,15 @@
 
 <style lang="scss">
   .poke-list {
-    display: flex;
+    display: grid;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(475px, 1fr);
 
     &.view-full {
+      display: flex;
       flex-wrap: wrap;
     }
   }
