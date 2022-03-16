@@ -21,7 +21,7 @@
   .nav {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid var(--color-text-black);
+    border-bottom: 1px solid var(--color-black);
     font-size: 13px;
 
     @media screen and (min-width: 1400px) {
@@ -50,7 +50,7 @@
     &,
     &:active,
     &:visited {
-      color: var(--color-text-black);
+      color: var(--color-black);
     }
 
     &::after {
@@ -60,7 +60,7 @@
       display: block;
       width: 100%;
       height: 5px;
-      background-color: var(--color-text-black);
+      background-color: var(--color-black);
       transform: translateY(100%);
       transition: transform var(--animation-duration), opacity var(--animation-duration);
     }

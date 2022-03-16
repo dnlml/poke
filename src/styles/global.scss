@@ -2,9 +2,9 @@
 @import './typography.scss';
 
 :root {
-  --color-background-cream: rgb(244, 242, 231);
-  --color-text-orange: rgb(197, 79, 0);
-  --color-text-black: rgb(51, 49, 47);
+  --color-cream: rgb(244, 242, 231);
+  --color-orange: rgb(197, 79, 0);
+  --color-black: rgb(51, 49, 47);
 
   --animation-duration: 0.33s;
 
@@ -12,10 +12,10 @@
 }
 
 body {
-  background-color: var(--color-background-cream);
+  background-color: var(--color-cream);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-text-orange);
+  color: var(--color-orange);
 }

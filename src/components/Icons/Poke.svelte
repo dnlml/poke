@@ -13,7 +13,7 @@
   .title {
     padding: 50px 15px;
     & path {
-      fill: var(--color-text-orange);
+      fill: var(--color-orange);
     }
   }
 </style>
