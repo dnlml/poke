@@ -7,29 +7,18 @@
 </script>
 
 <script>
+  import Paragraph from '../components/Paragraph/Paragraph.svelte';
   import Poke from '../components/Icons/Poke.svelte';
   import PokeList from '../components/PokeList/PokeList.svelte';
 </script>
 
 <Poke />
-
-<p class="paragraph">
+<Paragraph
+  content={`
   Hi there! This is POKE, a “stupid Pokemon list” that represents complex and complete Pokemons,
-  allowing them to shine on local stages and beyond.
-</p>
+  allowing them to shine on local stages and beyond.`}
+/>
 
 {#if pokemonStore.length}
-  <PokeList {pokemonStore} limit="10" />
+  <PokeList {pokemonStore} limit={10} isInHomepage={true} />
 {/if}
-
-<style lang="scss">
-  .paragraph {
-    font-size: 68px;
-    text-align: center;
-    color: var(--color-text-orange);
-    max-width: 1600px;
-    margin: 180px auto;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-</style>

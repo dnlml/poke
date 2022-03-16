@@ -7,11 +7,12 @@
 </script>
 
 <script>
+  import Paragraph from '../components/Paragraph/Paragraph.svelte';
   import PokeList from '../components/PokeList/PokeList.svelte';
 </script>
 
-<h1>Pokemons</h1>
+<Paragraph short={true} content="Pokemons" />
 
 {#if pokemonStore.length}
-  <PokeList {pokemonStore} limit={20} />
+  <PokeList {pokemonStore} limit={20} viewFull={true} />
 {/if}
