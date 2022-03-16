@@ -1,1 +1,17 @@
-<h1>Pokemon single</h1>
+<script context="module">
+  let pokemonData;
+  export const load = async ({ stuff, params }) => {
+    const { name } = params;
+    const { pokemonStore: pokemons } = stuff;
+    pokemonData = pokemons.filter((pk) => pk.name === name);
+    return pokemonData;
+  };
+</script>
+
+<script>
+  import Paragraph from '../../components/Paragraph/Paragraph.svelte';
+  const pokemon = pokemonData[0];
+  console.log(pokemon);
+</script>
+
+<Paragraph short={true} content={pokemon.name} />

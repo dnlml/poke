@@ -20,5 +20,5 @@
 />
 
 {#if pokemonStore.length}
-  <PokeList {pokemonStore} limit={10} isInHomepage={true} />
+  <PokeList {pokemonStore} limit={5} isInHomepage={true} />
 {/if}

@@ -21,10 +21,11 @@
 
     &.short {
       margin: 0px auto 80px;
-      padding: 120px 0 120px 0;
+      padding: 150px 0 150px 0;
       background-color: var(--color-orange);
       color: var(--color-cream);
       max-width: 100%;
+      font-size: 150px;
     }
   }
 </style>

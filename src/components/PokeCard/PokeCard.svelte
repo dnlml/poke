@@ -4,10 +4,12 @@
 </script>
 
 <li class="wrapper" class:grid-view={gridView}>
-  <span class="poke-name">
-    {data.name}
-  </span>
-  <img class="img" src={data.image} alt={data.name} />
+  <a class="link" href={`/pokemon/${data.name}`}>
+    <span class="poke-name">
+      {data.name}
+    </span>
+    <img class="img" src={data.image} alt={data.name} />
+  </a>
 </li>
 
 <style lang="scss">
@@ -48,5 +50,10 @@
     padding-left: 10px;
     word-break: break-all;
     text-align: center;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    color: var(--color-black);
   }
 </style>
