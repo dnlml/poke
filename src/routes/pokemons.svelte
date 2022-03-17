@@ -11,7 +11,7 @@
   import PokeList from '../components/PokeList/PokeList.svelte';
 </script>
 
-<Paragraph short={true} content="Pokemons" />
+<Paragraph headStyle={true} content="Pokemons" />
 
 {#if pokemonStore.length}
   <PokeList {pokemonStore} limit={20} viewFull={true} />

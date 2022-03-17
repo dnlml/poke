@@ -14,4 +14,5 @@
   console.log(pokemon);
 </script>
 
-<Paragraph short={true} content={pokemon.name} />
+<Paragraph headStyle={true} content={pokemon.name} />
+<img src={pokemon.image} alt={pokemon.name} />

@@ -1,10 +1,10 @@
 <script lang="ts">
   export let content: string = undefined;
-  export let short: boolean = false;
+  export let headStyle: boolean = false;
 </script>
 
 {#if content}
-  <p class="p" class:short>
+  <p class="p" class:head-style={headStyle}>
     {content}
   </p>
 {/if}
@@ -19,7 +19,7 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    &.short {
+    &.head-style {
       margin: 0px auto 80px;
       padding: 150px 0 150px 0;
       background-color: var(--color-orange);
