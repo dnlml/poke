@@ -4,7 +4,7 @@
 </script>
 
 <li class="wrapper" class:grid-view={gridView}>
-  <a class="link" href={`/pokemon/${data.name}`}>
+  <a class="link" href={`/pokemons/${data.name}`}>
     <span class="poke-name">
       {data.name}
     </span>

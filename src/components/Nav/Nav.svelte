@@ -6,7 +6,13 @@
 <nav class="nav">
   <ul class="routes">
     {#each paths as path}
-      <li><a href={path.path} class:active={$page.url.pathname == path.path}>{path.title}</a></li>
+      <li>
+        <a
+          href={path.path}
+          class:active={$page.url.pathname === path.path ||
+            ($page.url.pathname.indexOf(path.path) > -1 && path.path !== '/')}>{path.title}</a
+        >
+      </li>
     {/each}
   </ul>
 
