@@ -1,6 +1,7 @@
 import type { IPokemon } from 'src/types/IPokemon';
+import type { PokeAPI } from 'pokeapi-types';
 
-export const buildPokemon = (fullPokemon): IPokemon => {
+export const buildPokemon = (fullPokemon: PokeAPI.Pokemon): IPokemon => {
   const { name, sprites, abilities, base_experience: experience, weight } = fullPokemon;
 
   const refactoredAbilities = abilities.map((ability) => ability.ability.name);
