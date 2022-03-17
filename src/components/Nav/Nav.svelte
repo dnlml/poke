@@ -3,7 +3,7 @@
   import { paths } from '../../constants';
 </script>
 
-<nav class="nav">
+<nav class="nav" class:absolute={$page.url.pathname !== '/'}>
   <ul class="routes">
     {#each paths as path}
       <li>
@@ -32,6 +32,10 @@
 
     @media screen and (min-width: 1400px) {
       font-size: 16px;
+    }
+    &.absolute {
+      position: absolute;
+      width: 100%;
     }
   }
   .routes {
