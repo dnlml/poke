@@ -1,14 +1,12 @@
-interface IPokemon {
-  name: string;
-  url: string;
-}
+import type { IPokemon } from '../types/IPokemon';
+import { buildPokemon } from '../utils/buildPokemon';
 
 export const getPokemons = async (offset?: number, limit?: number) => {
   const pokemonsNamed = await getPokemonList(offset, limit);
   const urls = [];
   const pokemons = [];
 
-  pokemonsNamed.forEach((pokemon) => {
+  pokemonsNamed.forEach((pokemon: any) => {
     urls.push(fetch(pokemon.url));
   });
 
@@ -22,10 +20,8 @@ export const getPokemons = async (offset?: number, limit?: number) => {
     })
     .then((pokemonList) => {
       pokemonList.map((pk) => {
-        pokemons.push({
-          name: pk.name,
-          image: pk.sprites.other['official-artwork']['front_default']
-        });
+        const tmpPk = buildPokemon(pk);
+        pokemons.push(tmpPk);
       });
     });
 

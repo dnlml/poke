@@ -8,11 +8,23 @@
   };
 </script>
 
-<script>
+<script lang="ts">
   import Paragraph from '../../components/Paragraph/Paragraph.svelte';
-  const pokemon = pokemonData[0];
+  const pokemon = pokemonData && pokemonData.length ? pokemonData[0] : [];
   console.log(pokemon);
 </script>
 
-<Paragraph headStyle={true} content={pokemon.name} />
-<img src={pokemon.image} alt={pokemon.name} />
+{#if pokemon}
+  <Paragraph headStyle={true} content={pokemon.name} />
+  <img src={pokemon.image} alt={pokemon.name} />
+
+  <dl>
+    <dt>Abilities</dt>
+    {#each pokemon.abilities as ab}
+      <dd>{ab}</dd>
+    {/each}
+  </dl>
+
+  <p>Experience: {pokemon.experience}</p>
+  <p>Weight: {pokemon.weight}</p>
+{/if}

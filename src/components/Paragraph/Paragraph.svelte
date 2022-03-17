@@ -26,6 +26,7 @@
       color: var(--color-cream);
       max-width: 100%;
       font-size: 150px;
+      text-transform: capitalize;
     }
   }
 </style>
