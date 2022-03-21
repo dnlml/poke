@@ -7,11 +7,11 @@
 </script>
 
 <script lang="ts">
+  import { pokemonToBeShown } from '../store/store';
   import Paragraph from '../components/Paragraph/Paragraph.svelte';
   import Poke from '../components/Icons/Poke.svelte';
   import PokeList from '../components/PokeList/PokeList.svelte';
-
-  let pokemonToBeShown: number = 5;
+  import PokeLimiter from '../components/PokeLimiter/PokeLimiter.svelte';
 </script>
 
 <Poke />
@@ -21,13 +21,10 @@
   allowing them to shine on local stages and beyond.`}
 />
 
-<div class="pokemon-counter">
-  <label for="showValue">Pokemon to show: &nbsp;</label>
-  <input type="number" bind:value={pokemonToBeShown} min={1} max={7} id="showValue" />
-</div>
+<PokeLimiter />
 
 {#if pokemonStore.length}
-  <PokeList {pokemonStore} limit={pokemonToBeShown} isInHomepage={true} />
+  <PokeList {pokemonStore} limit={$pokemonToBeShown} isInHomepage={true} />
 {/if}
 
 <style lang="scss">

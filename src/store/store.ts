@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const pokemonStore = writable([]);
+export const pokemonToBeShown = writable(5);
