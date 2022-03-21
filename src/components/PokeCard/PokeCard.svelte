@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition';
+
   export let data;
   export let gridView: boolean = false;
 </script>
 
-<li class="wrapper" class:grid-view={gridView}>
+<li class="wrapper" class:grid-view={gridView} transition:slide={{ duration: 300 }}>
   <a class="link" href={`/pokemons/${data.name}`}>
     <span class="poke-name">
       {data.name}

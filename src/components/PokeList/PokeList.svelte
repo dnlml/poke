@@ -5,7 +5,7 @@
   export let limit = 0;
   export let viewFull: boolean = false;
   export let isInHomepage: boolean = false;
-  const pokemosToBeShown = limit > 0 ? pokemonStore.slice(0, limit) : pokemonStore;
+  $: pokemosToBeShown = limit > 0 ? pokemonStore.slice(0, limit) : pokemonStore;
 </script>
 
 <ul class="poke-list" class:view-full={viewFull}>
