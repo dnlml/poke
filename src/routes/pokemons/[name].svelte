@@ -1,35 +1,29 @@
-<script context="module">
-  let pokemonData;
-  export const load = async ({ stuff, params }) => {
-    const { name } = params;
-    const { pokemonStore: pokemons } = stuff;
-    pokemonData = pokemons.filter((pk) => pk.name === name);
-    return pokemonData;
-  };
-</script>
-
 <script lang="ts">
+  import { page } from '$app/stores';
   import Paragraph from '../../components/Paragraph/Paragraph.svelte';
-  const pokemon = pokemonData && pokemonData.length ? pokemonData[0] : [];
+  import { pokemonStore } from '../../store/store';
+  const { name } = $page.params;
+  const pokemonData = $pokemonStore.filter((pk) => pk.name === name);
+  const pokemon = pokemonData?.length ? pokemonData[0] : [];
+  const { image, abilities, experience, weight } = pokemon;
 </script>
 
-{#if pokemon}
-  <Paragraph headStyle={true} content={pokemon.name} />
-  <div class="content">
-    <img src={pokemon.image} alt={pokemon.name} />
-    <div class="content-inner">
+<Paragraph headStyle={true} content={pokemon.name} />
+<div class="content">
+  <img src={image} alt={pokemon.name} />
+  <div class="content-inner">
+    {#if abilities?.length}
       <dl>
         <dt>Abilities</dt>
-        {#each pokemon.abilities as ab}
+        {#each abilities as ab, i (i)}
           <dd>{ab}</dd>
         {/each}
       </dl>
-
-      <p><span>Experience</span> {pokemon.experience}</p>
-      <p><span>Weight</span>{pokemon.weight}</p>
-    </div>
+    {/if}
+    <p><span>Experience</span> {experience}</p>
+    <p><span>Weight</span>{weight}</p>
   </div>
-{/if}
+</div>
 
 <style lang="scss">
   .content {

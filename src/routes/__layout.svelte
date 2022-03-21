@@ -1,13 +1,12 @@
 <script context="module">
   import { getPokemons } from '../services/api';
+  import { pokemonStore } from '../store/store';
 
-  export const load = async () => {
-    const pokemonStore = await getPokemons(0, 15);
-    return {
-      stuff: {
-        pokemonStore
-      }
-    };
+  export const load = async ({ fetch }) => {
+    const tmpPokemonStore = await getPokemons(fetch, 0, 15);
+
+    pokemonStore.update(() => tmpPokemonStore);
+    return pokemonStore;
   };
 </script>
 

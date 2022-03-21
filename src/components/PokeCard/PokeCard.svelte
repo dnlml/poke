@@ -3,9 +3,15 @@
 
   export let data;
   export let gridView: boolean = false;
+
+  const myTransition = (node, args) => {
+    if (!gridView) {
+      return slide(node, args);
+    }
+  };
 </script>
 
-<li class="wrapper" class:grid-view={gridView} transition:slide={{ duration: 300 }}>
+<li class="wrapper" class:grid-view={gridView} transition:myTransition={{ duration: 330 }}>
   <a class="link" href={`/pokemons/${data.name}`}>
     <span class="poke-name">
       {data.name}

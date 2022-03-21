@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { pokemonStore } from '../../store/store';
   import PokeCard from '../PokeCard/PokeCard.svelte';
   import ShowAll from '../ShowAll/ShowAll.svelte';
-  export let pokemonStore;
   export let limit = 0;
   export let viewFull: boolean = false;
   export let isInHomepage: boolean = false;
-  $: pokemosToBeShown = limit > 0 ? pokemonStore.slice(0, limit) : pokemonStore;
+
+  $: pokemosToBeShown = limit > 0 ? $pokemonStore.slice(0, limit) : $pokemonStore;
 </script>
 
 <ul class="poke-list" class:view-full={viewFull}>

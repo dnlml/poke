@@ -1,11 +1,3 @@
-<script context="module">
-  let pokemonStore = [];
-  export const load = async ({ stuff }) => {
-    pokemonStore = stuff.pokemonStore;
-    return pokemonStore;
-  };
-</script>
-
 <script lang="ts">
   import { pokemonToBeShown } from '../store/store';
   import Paragraph from '../components/Paragraph/Paragraph.svelte';
@@ -23,26 +15,4 @@
 
 <PokeLimiter />
 
-{#if pokemonStore.length}
-  <PokeList {pokemonStore} limit={$pokemonToBeShown} isInHomepage={true} />
-{/if}
-
-<style lang="scss">
-  .pokemon-counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 40px;
-    font-size: 50px;
-    font-family: var(--font-stack);
-  }
-
-  input {
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    font-size: 50px;
-    font-family: var(--font-stack);
-    color: inherit;
-  }
-</style>
+<PokeList limit={$pokemonToBeShown} isInHomepage={true} />

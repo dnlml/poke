@@ -1,8 +1,8 @@
 import { buildPokemon } from '../utils/buildPokemon';
 import type { PokeAPI } from 'pokeapi-types';
 
-export const getPokemons = async (offset?: number, limit?: number) => {
-  const pokemonsNamed = await getPokemonList(offset, limit);
+export const getPokemons = async (fetch, offset?: number, limit?: number) => {
+  const pokemonsNamed = await getPokemonList(fetch, offset, limit);
   const urls = [];
   const pokemons = [];
 
@@ -29,6 +29,7 @@ export const getPokemons = async (offset?: number, limit?: number) => {
 };
 
 const getPokemonList = async (
+  fetch: (url: string) => Promise<Response>,
   offset?: number,
   limit?: number
 ): Promise<PokeAPI.NamedAPIResource[]> => {
