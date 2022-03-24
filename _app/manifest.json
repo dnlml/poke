@@ -1,0 +1,127 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-c17bd985.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-f3427501.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      "src/routes/__error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/pokemons/[name].svelte",
+      "src/routes/pokemons.svelte",
+      "src/routes/about.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-6d82adf1.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js",
+      "_store-7be4d66a.js",
+      "_stores-30489e5d.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-696b3c3c.css"
+    ]
+  },
+  "src/routes/__error.svelte": {
+    "file": "pages/__error.svelte-4f03189d.js",
+    "src": "src/routes/__error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-14f6744d.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js",
+      "_store-7be4d66a.js",
+      "_Paragraph-73faaa0a.js",
+      "_PokeList-4723b0d7.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-ded429a7.css"
+    ]
+  },
+  "src/routes/pokemons/[name].svelte": {
+    "file": "pages/pokemons/_name_.svelte-6dd38fc2.js",
+    "src": "src/routes/pokemons/[name].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js",
+      "_stores-30489e5d.js",
+      "_Paragraph-73faaa0a.js",
+      "_store-7be4d66a.js"
+    ],
+    "css": [
+      "assets/pages/pokemons/_name_.svelte-aea67bf9.css"
+    ]
+  },
+  "src/routes/pokemons.svelte": {
+    "file": "pages/pokemons.svelte-d43e9608.js",
+    "src": "src/routes/pokemons.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js",
+      "_Paragraph-73faaa0a.js",
+      "_PokeList-4723b0d7.js",
+      "_store-7be4d66a.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-024b0ba5.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-f3427501.js",
+      "_Paragraph-73faaa0a.js"
+    ]
+  },
+  "_vendor-f3427501.js": {
+    "file": "chunks/vendor-f3427501.js"
+  },
+  "_store-7be4d66a.js": {
+    "file": "chunks/store-7be4d66a.js",
+    "imports": [
+      "_vendor-f3427501.js"
+    ]
+  },
+  "_stores-30489e5d.js": {
+    "file": "chunks/stores-30489e5d.js",
+    "imports": [
+      "_vendor-f3427501.js"
+    ]
+  },
+  "_Paragraph-73faaa0a.js": {
+    "file": "chunks/Paragraph-73faaa0a.js",
+    "imports": [
+      "_vendor-f3427501.js"
+    ],
+    "css": [
+      "assets/Paragraph-0e0543ba.css"
+    ]
+  },
+  "_PokeList-4723b0d7.js": {
+    "file": "chunks/PokeList-4723b0d7.js",
+    "imports": [
+      "_vendor-f3427501.js",
+      "_store-7be4d66a.js"
+    ],
+    "css": [
+      "assets/PokeList-189f22fe.css"
+    ]
+  }
+}
