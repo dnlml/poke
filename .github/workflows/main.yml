@@ -28,6 +28,9 @@ jobs:
       - name: Run npm ci
         run: npm ci
 
+      - name: Run npm ci
+        run: npx playwright install
+
       - name: Run tests
         run: npm run test
 
