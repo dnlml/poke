@@ -6,9 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,8 +35,8 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Run deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v4
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          BRANCH: gh-pages
-          FOLDER: build
+          branch: gh-pages
+          folder: build
