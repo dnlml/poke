@@ -1,7 +1,7 @@
 import { dev } from '$app/env';
 
 const isProduction = !dev;
-export const basepath = isProduction ? '/poke' : '/';
+export const basepath = isProduction ? '/poke/' : '/';
 
 interface IPath {
   path: string;
