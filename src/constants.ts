@@ -1,3 +1,8 @@
+import { dev } from '$app/env';
+
+const isProduction = !dev;
+export const basepath = isProduction ? '/poke' : '/';
+
 interface IPath {
   path: string;
   title: string;
@@ -5,15 +10,15 @@ interface IPath {
 
 export const paths: IPath[] = [
   {
-    path: '/',
+    path: basepath,
     title: 'Home'
   },
   {
-    path: '/about',
+    path: basepath + 'about',
     title: 'About'
   },
   {
-    path: '/pokemons',
+    path: basepath + 'pokemons',
     title: 'Pokemons'
   }
 ];
