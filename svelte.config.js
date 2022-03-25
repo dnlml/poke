@@ -1,6 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import autoprefixer from 'autoprefixer';
 import sveltePreprocess from 'svelte-preprocess';
+import 'dotenv/config';
+import { env } from 'process';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,7 +20,10 @@ const config = {
       assets: 'build',
       fallback: 'index.html',
       precompress: false
-    })
+    }),
+    paths: {
+      base: env.VITE_ENV === 'production' ? '/poke' : ''
+    }
   }
 };
 
