@@ -2,6 +2,7 @@ import { dev } from '$app/env';
 
 const isProduction = !dev;
 export const basepath = isProduction ? '/poke/' : '/';
+export const homepath = isProduction ? '/poke' : '/';
 
 interface IPath {
   path: string;

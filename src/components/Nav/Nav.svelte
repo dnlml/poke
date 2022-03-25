@@ -1,17 +1,19 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { paths, basepath } from '../../constants';
+  import { paths, basepath, homepath } from '../../constants';
 </script>
 
-<nav class="nav" class:absolute={$page.url.pathname !== basepath}>
+<nav class="nav" class:absolute={$page.url.pathname !== homepath}>
   <ul class="routes">
     {#each paths as path}
       <li>
         <a
           href={path.path}
           class:active={$page.url.pathname === path.path ||
-            ($page.url.pathname.indexOf(path.path) > -1 && path.path !== basepath)}>{path.title}</a
+            ($page.url.pathname.indexOf(path.path) > -1 && path.path !== basepath)}
         >
+          {path.title}
+        </a>
       </li>
     {/each}
   </ul>
