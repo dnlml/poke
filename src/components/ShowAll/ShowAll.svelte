@@ -1,8 +1,9 @@
-<script lang="ts">
+<script>
+  import { basepath } from '../../constants';
 </script>
 
 <li class="wrapper">
-  <a href="/pokemons">
+  <a href={`${basepath}pokemons`}>
     <span class="poke-name"> Show All </span>
   </a>
 </li>

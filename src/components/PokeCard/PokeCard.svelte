@@ -1,6 +1,6 @@
 <script lang="ts">
   import { slide } from 'svelte/transition';
-
+  import { basepath } from '../../constants';
   export let data;
   export let gridView: boolean = false;
 
@@ -12,7 +12,7 @@
 </script>
 
 <li class="wrapper" class:grid-view={gridView} transition:myTransition={{ duration: 330 }}>
-  <a class="link" href={`/pokemons/${data.name}`}>
+  <a class="link" href={`${basepath}pokemons/${data.name}`}>
     <span class="poke-name">
       {data.name}
     </span>
