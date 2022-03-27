@@ -11,7 +11,7 @@
   };
 </script>
 
-<li class="wrapper" class:grid-view={gridView} transition:myTransition={{ duration: 330 }}>
+<li class="wrapper" class:grid-view={gridView} transition:myTransition|local={{ duration: 330 }}>
   <a class="link" href={`${basepath}pokemons/${data.name}`}>
     <span class="poke-name">
       {data.name}
