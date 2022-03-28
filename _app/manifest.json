@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-44e93f7c.js",
+    "file": "start-51dec5a8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,15 +16,14 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-87e4441e.js",
+    "file": "pages/__layout.svelte-6d82adf1.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-f3427501.js",
       "_store-7be4d66a.js",
-      "_stores-30489e5d.js",
-      "_constants-b90f65e7.js"
+      "_stores-30489e5d.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-696b3c3c.css"
@@ -40,7 +39,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-65fbd084.js",
+    "file": "pages/index.svelte-7cf722f2.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -48,8 +47,7 @@
       "_vendor-f3427501.js",
       "_store-7be4d66a.js",
       "_Paragraph-73faaa0a.js",
-      "_PokeList-acc18bc4.js",
-      "_constants-b90f65e7.js"
+      "_PokeList-8f6ec30e.js"
     ],
     "css": [
       "assets/pages/index.svelte-ded429a7.css"
@@ -71,16 +69,15 @@
     ]
   },
   "src/routes/pokemons.svelte": {
-    "file": "pages/pokemons.svelte-c3d3c31b.js",
+    "file": "pages/pokemons.svelte-7f746fc7.js",
     "src": "src/routes/pokemons.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-f3427501.js",
       "_Paragraph-73faaa0a.js",
-      "_PokeList-acc18bc4.js",
-      "_store-7be4d66a.js",
-      "_constants-b90f65e7.js"
+      "_PokeList-8f6ec30e.js",
+      "_store-7be4d66a.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -108,9 +105,6 @@
       "_vendor-f3427501.js"
     ]
   },
-  "_constants-b90f65e7.js": {
-    "file": "chunks/constants-b90f65e7.js"
-  },
   "_Paragraph-73faaa0a.js": {
     "file": "chunks/Paragraph-73faaa0a.js",
     "imports": [
@@ -120,12 +114,11 @@
       "assets/Paragraph-0e0543ba.css"
     ]
   },
-  "_PokeList-acc18bc4.js": {
-    "file": "chunks/PokeList-acc18bc4.js",
+  "_PokeList-8f6ec30e.js": {
+    "file": "chunks/PokeList-8f6ec30e.js",
     "imports": [
       "_vendor-f3427501.js",
-      "_store-7be4d66a.js",
-      "_constants-b90f65e7.js"
+      "_store-7be4d66a.js"
     ],
     "css": [
       "assets/PokeList-189f22fe.css"
