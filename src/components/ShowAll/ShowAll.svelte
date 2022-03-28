@@ -1,9 +1,5 @@
-<script>
-  import { basepath } from '../../constants';
-</script>
-
 <li class="wrapper">
-  <a href={`${basepath}pokemons`}>
+  <a href={`/pokemons`}>
     <span class="poke-name"> Show All </span>
   </a>
 </li>
